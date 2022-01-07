@@ -1,9 +1,5 @@
-client_secret: ''
-user_agent: ''
-client_id: ''
-username: ''
-password: ''
-mod_sub: ''
+user_agent: 'web:scvbotly:v1.0 (by /u/sirkazuo)'
+mod_sub: 'SantaClarita'
 filtered_subs:
   - conspiracy
   - FauciForPrison
