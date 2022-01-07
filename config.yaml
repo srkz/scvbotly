@@ -1,21 +1,7 @@
-client_secret: ''
-user_agent: ''
-client_id: ''
-username: ''
-password: ''
-mod_sub: ''
-nsfw_subs:
-  - gonewild
-  - dirtyr4r
-  - dirtypenpals
-  - OnlineAffairs
-  - DirtySnapchat
-  - dirtykikpals
-  - kikpals
-  - sextingfree
-  - RandomActsOfBlowJob
-  - BDSMpersonals
-  - NSFWskype
-  - RandomActsOfOralSex
-  - eroticpenpals
-removal_message: 'Hello /u/{}! Your submission was removed because you have participated in an NSFW subreddit'
+user_agent: 'web:scvbotly:v1.0 (by /u/sirkazuo)'
+mod_sub: 'SantaClarita'
+filtered_subs:
+  - conspiracy
+  - FauciForPrison
+  - ivermectin
+  - fauci

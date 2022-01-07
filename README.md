@@ -1,21 +1,8 @@
-# turbo-mod
+# scvbotly
 
-Removes post submissions from your moderated subreddit if the user has publically interacted (commented or posted) from any subreddit you add to the list in the `config.yaml` file.
-
-As a few examples, the config.yaml file has a small list of NSFW subreddit names already added. You may edit and remove them, and change any variable names in the main.py file as you please.
-
-This code is the bare basics as described above, you can add more moderation features by editing the python code in main.py to fit your needs; you'll likely need to reference [PRAW](https://praw.readthedocs.io/en/stable/code_overview/praw_models.html) documention and view [r/redditdev](https://www.reddit.com/r/redditdev/) to learn more on your own.
-
-If you want the bot to also remove comments made on your moderated subreddit alongside post submissions you would need to repeat the same procedures in this guide (except creating a new reddit account, use the same credentials) to host the same code (with a few minor edits in main.py) separaetly on a second heroku account you make. 
-
-The only edits needed to make the code scan for comments instead of posts is to change the main `for` loop in `main.py` to `for comment in reddit.subreddit(mod_sub).stream.comments(skip_existing=True):` and change the variable name `submission` to the name `comment` for lines 25, 40, 41.
+Removes comments from a moderated subreddit if the user has publically interacted (commented or posted) with any subreddit added to the list in the `config.yaml` file.
 
 # Setup
-
-Clone the github repository, change directories:
-
-    git clone https://github.com/CaringCactus/turbo-mod
-    cd turbo-mod
 
 Install the requirements:
 
