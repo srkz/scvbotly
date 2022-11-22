@@ -32,7 +32,7 @@ while True:
                         break
                 if is_filtered == True:
                     print('New comment from u/' + author + ': Removed due to filtered account activity.')
-                    comment.mod.remove()
+                    comment.mod.remove(mod_note='filtered activity')
                     break
                 else:
                     print('New comment from u/' + author + ': Clean account.')
