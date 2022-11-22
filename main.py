@@ -17,22 +17,16 @@ while True:
             if comment is None:
                 break
             else:
-                print('new comment coming in, setting is_filtered to false')
                 is_filtered = False
                 author = comment.author.name
-                print('comment author name is u/' + author)
                 
                 userSubmissions = reddit.redditor(author).submissions.new(limit=None)
-                print('checking user submissions against filtered subs')
                 for acct_submission in userSubmissions:
-                    print('submission in' + acct_submission.subreddit.display_name)
                     if acct_submission.subreddit.display_name in subs:
                         is_filtered = True
                         break
                 userComments = reddit.redditor(author).comments.new(limit=None)
-                print('checking user comments against filtered subs')
                 for acct_comment in userComments:
-                    print('comment in ' + acct_comment.subreddit.display_name)
                     if acct_comment.subreddit.display_name in subs:
                         is_filtered = True
                         break
