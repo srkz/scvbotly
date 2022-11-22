@@ -23,7 +23,7 @@ while True:
                 print('comment author name is u/' + author)
                 
                 userSubmissions = reddit.redditor(author).submissions.new(limit=None)
-                print('checking user submissions against filtered subs' + subs)
+                print('checking user submissions against filtered subs:' + *subs, sep = ", ")
                 for acct_submission in userSubmissions:
                     print('submission in' + acct_submission.subreddit.display_name)
                     if acct_submission.subreddit.display_name in subs:
