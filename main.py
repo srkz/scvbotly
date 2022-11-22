@@ -29,16 +29,12 @@ while True:
                     if acct_submission.subreddit.display_name in subs:
                         is_filtered = True
                         break
-                    else:
-                        break
                 userComments = reddit.redditor(author).comments.new(limit=None)
                 print('checking user comments against filtered subs')
                 for acct_comment in userComments:
-                    print('comment in' + acct_comment.subreddit.display_name)
+                    print('comment in ' + acct_comment.subreddit.display_name)
                     if acct_comment.subreddit.display_name in subs:
                         is_filtered = True
-                        break
-                    else:
                         break
                 if is_filtered == True:
                     print('New comment from u/' + author + ': Removed due to filtered account activity.')
