@@ -18,7 +18,7 @@ while True:
                 break
             else:
                 is_filtered = False
-                author = submission.author
+                author = comment.author.name
                 
                 userSubmissions = reddit.redditor(author).submissions.new(limit=None)
                 for acct_submission in userSubmissions:
