@@ -20,12 +20,12 @@ while True:
                 is_filtered = False
                 author = comment.author.name
                 
-                userSubmissions = reddit.redditor(author).submissions.new(limit=None)
+                userSubmissions = reddit.redditor(author).submissions.new(limit=250)
                 for acct_submission in userSubmissions:
                     if acct_submission.subreddit.display_name in subs:
                         is_filtered = True
                         break
-                userComments = reddit.redditor(author).comments.new(limit=None)
+                userComments = reddit.redditor(author).comments.new(limit=250)
                 for acct_comment in userComments:
                     if acct_comment.subreddit.display_name in subs:
                         is_filtered = True
