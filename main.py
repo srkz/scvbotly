@@ -10,7 +10,7 @@ reddit = praw.Reddit(user_agent=user_agent)
 
 streamComments = reddit.subreddit(mod_sub).stream.comments(pause_after=-1, skip_existing=True)
 
-print('About to start while loop!')
+print('Starting comment stream')
 while True:
     try:
         for comment in streamComments:
@@ -20,12 +20,12 @@ while True:
                 is_filtered = False
                 author = comment.author.name
                 
-                userSubmissions = reddit.redditor(author).submissions.new(limit=250)
+                userSubmissions = reddit.redditor(author).submissions.new(limit=None)
                 for acct_submission in userSubmissions:
                     if acct_submission.subreddit.display_name in subs:
                         is_filtered = True
                         break
-                userComments = reddit.redditor(author).comments.new(limit=250)
+                userComments = reddit.redditor(author).comments.new(limit=None)
                 for acct_comment in userComments:
                     if acct_comment.subreddit.display_name in subs:
                         is_filtered = True
